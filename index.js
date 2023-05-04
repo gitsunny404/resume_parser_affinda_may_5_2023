@@ -2,7 +2,9 @@ import express from 'express';
 import multer from 'multer';
 import request from 'request';
 import fs from 'fs';
+import dotenv from 'dotenv';
 
+dotenv.config();
 const app = express();
 
 // Set up multer for file uploads
@@ -20,7 +22,7 @@ app.post('/affinda/resume/upload', upload.single('file'), (req, res) => {
     headers: {
       accept: 'application/json',
       'content-type': 'multipart/form-data; boundary=---011000010111000001101001',
-      authorization: 'Bearer 97aa515cebecbf2930c1f4b7887a2f516acf56f6'
+      authorization: `Bearer ${process.env.KEY}`
     },
     formData: {
       wait: 'true',
