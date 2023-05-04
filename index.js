@@ -11,7 +11,7 @@ const app = express();
 const upload = multer({ dest: 'uploads/' });
 
 // Define the upload route
-app.post('/affinda/resume/upload', upload.single('file'), (req, res) => {
+app.post('/api/affinda/resume/upload', upload.single('file'), (req, res) => {
   // Read the file from the uploads folder
   const filePath = req.file.path;
 
