@@ -30,10 +30,12 @@ app.post('/api/affinda/resume/upload', upload.single('file'), (req, res) => {
         value: fs.createReadStream(filePath),
         options: { filename: req.file.originalname, contentType: req.file.mimetype }
       },
-      collection: 'lxiwtSAC',
-      workspace: 'UPOhqDGy'
+      collection: 'zxQGxUbo',
+      workspace: 'jxkYSTWX'
     }
   };
+
+  // https://app.affinda.com/org/bFLJlHUH/workspace/jxkYSTWX/collection/zxQGxUbo
 
   // Make the request to the Affinda API
   request(options, (error, response, body) => {
