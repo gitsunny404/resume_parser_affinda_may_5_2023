@@ -3,9 +3,12 @@ import multer from 'multer';
 import request from 'request';
 import fs from 'fs';
 import dotenv from 'dotenv';
+import cors from 'cors';
 
 dotenv.config();
 const app = express();
+app.use(cors());
+
 
 // Set up multer for file uploads
 const upload = multer({ dest: 'uploads/' });
